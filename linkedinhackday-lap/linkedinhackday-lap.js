@@ -16,6 +16,42 @@ if (Meteor.isClient) {
   // counter starts at 0
   Session.setDefault('counter', 0);
 
+  Meteor.setInterval(function() {
+      var mealReminders = [
+        "Make sure you eat your breakfast. That's the most important meal of the day.",
+        "Make sure you eat your lunch. Having 3 meals a day is necessary for good health.",
+        "Make sure you eat your dinner. Having 3 meals a day is necessary for good health.",
+      ];
+      var tips = [
+        "Exoffenders.net offers many good resources for re-entry programs.",
+        "Applying for a driver's license is a good first step to getting a state-issued government ID.",
+        "You may not be eligible for social security benefits if you are in a halfway house.",
+        "If you need help with your grocery list, we have a tool at our website that can help recommend some specific brands you can buy.",
+        "Project Return is a re-entry program that provides job and career training, as well as other resources.",
+        "Impact Services offers many re-entry programs that provide job, community and economic development.",
+        "If you are experiencing suicidal thoughts, seek help. Suicide hotline: 1 (800) 273-8255.",
+        "When applying for jobs, you'll need your Social Security card, a state-issued ID."
+      ];
+      var getRandomInt = function(min, max) {
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+      var currentTime = new Date();
+      var hour = currentTime.getHours() + 1;
+      var message = "";
+      if (hour === 8) {
+        message = mealReminders[0];
+      } else if (hour === 12) {
+        message = mealReminders[1];
+      } else if (hour === 18) {
+        message = mealReminders[2];
+      } else {
+        var index = getRandomInt(0, tips.length - 1);
+        message = tips[index];
+      }
+      phone = phone || "+15132767735";
+      Meteor.call("sendSMS", name, phone, message);
+  }, 1000 * 60);
+
   Template.hello.helpers({
     // counter: function () {
     //   return Session.get('counter');
@@ -36,7 +72,7 @@ if (Meteor.isClient) {
       phone = event.target.phone.value;
       console.log("name",name);
       console.log("phone",phone);
-      Meteor.call("sendSMS", name, phone);
+      Meteor.call("sendSMS", name, phone, "Thank you for signing up with L.A.P.!");
     }
   });
 
@@ -95,6 +131,18 @@ if (Meteor.isClient) {
         description: "Many companies will require a job application as well as an interview. You can still be eligible for employment even if you are an ex-offender. Many job applications will do some background checks as well. Click the link for interview tips.",
         website: "https://www.iseek.org/exoffenders/find-job/interview-tips-ex-offenders.html",
         category: "employment"
+      },
+      {
+        heading: "Health Benefits",
+        description: "Under the recent provisions of Obamacare and the Affordable Health Care Act, you are eligible for health benefits by the way of Medicaid. The link below will take you to these benefits.",
+        website: "http://medicaid.gov/affordablecareact/provisions/benefits.html",
+        category: "health"
+      },
+      {
+        heading: "More Re-entry Resources",
+        description: "Impact Services provides many programs including employment and training opportunities, housing development, and community development for re-entry participants.",
+        website: "http://www.impactservices.org/reentry-services-for-ex-offenders/",
+        category: "general"
       }
     ]
   });
@@ -130,7 +178,7 @@ if (Meteor.isServer) {
           twilio.sendSms({
               to: phone, // Any number Twilio can deliver to 
               from: '+18594485127', // A number you bought from Twilio and can use for outbound communication 
-              body: 'Hello ' + name + '!' // body of the SMS message 
+              body: message // body of the SMS message 
             }, function(err, responseData) { //this function is executed when a response is received from Twilio 
               if (!err) { // "err" is an error received during the request, if any 
                 // "responseData" is a JavaScript object containing data received from Twilio. 

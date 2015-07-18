@@ -9,7 +9,7 @@
 
 <body>
   <h1>Welcome to Meteor!</h1>
-
+  <a href="/resources">Resources</a>
 </body>
 
 <template name="hello">
@@ -44,5 +44,26 @@
         <input type="submit" value="enter the year">
     </form>
 	<p>Timeline feature here</p>
+</template>
 
+<template name="resources">
+	<div class="row">
+		<a class="categoryFilter" href="*"><span class="label label-default">All</span></a>
+		{{#each categories}}
+			<a class="categoryFilter" href="{{text}}"><span class="label label-default">{{text}}</span></a>
+		{{/each}}
+	</div>
+	<div class="grid">
+		{{#each resources}}
+			{{> card}}
+		{{/each}}
+	</div>
+</template>
+
+<template name="card">
+	 <div class="grid-item {{category}}">
+		<h1 align="center">{{heading}}</h1>
+		<p>{{description}}</p>
+		<a href="{{website}}"><button class="btn btn-default">Learn More</button></a>
+	 </div>
 </template>

@@ -185,13 +185,28 @@ if (Meteor.isClient) {
                                    "credit":"",
                                     "caption":"From humble middle-class roots to running the most valuable tech company in the world, Apple co-founder Steve Jobs was powerful and revered. His death on October 5 after a long battle with cancer made waves around the world."
                                   }
-                                }
+                                },
+                                { 
+                                "startDate":"2013,04,11",
+                                "endDate":"2013,04,11",
+                                "headline":"Linkedin Acquires Pulse",
+                                "text":"<p>LinkedIn today announced that it has acquired Pulse, the popular newsreader for the web and mobile. Pulse was founded in 2010 by Akshay Kothari and Ankit Gupta while they were still students at Stanford University. The service started out as an iPad app, but quickly expanded to other platforms, including the web. Just recently, Pulse started to dip its toes into social by adding a number of social features to its apps. Given today’s acquisition, chances are Pulse will put a stronger focus on this in the near future.</p>",
+                                "tag":"This is Optional",
+                                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                                "asset": {
+                                   "media":"https://tctechcrunch2011.files.wordpress.com/2013/04/linkedin_pulse.png?w=698",
+                                   "thumbnail":"https://tctechcrunch2011.files.wordpress.com/2013/04/linkedin_pulse.png?w=698",
+                                   "credit":"",
+                                    "caption":"The transaction, LinkedIn says, is valued at approximately $90 million in a combination of about 90 percent stock and 10 percent cash. The acquisition is expected to close in the second quarter of 2013."
+                                  }
+                                },
+
                         ],
                         "era": [
                             {
                                 "startDate":"2011,12,10",
                                 "endDate":"2011,12,11",
-                                "headline":"Headline Goes Here",
+                                "headline":"",
                                 "text":"<p>this is an era, this is an era</p>",
                                 "tag":"This is Optional"
                             }
@@ -213,7 +228,7 @@ if (Meteor.isClient) {
 
       createStoryJS({
                     type:       'timeline',
-                    width:      '800',
+                    width:      '1450',
                     height:     '600',
                     source:     dataObject,
                     embed_id:   'my-timeline'

@@ -72,17 +72,19 @@
 </template>
 
 <template name="resources">
-	<div class="row">
-		<a class="categoryFilter" href="*"><span class="label label-default">All</span></a>
-		{{#each categories}}
-			<a class="categoryFilter" href="{{text}}"><span class="label label-default">{{text}}</span></a>
-		{{/each}}
-	</div>
-	<div class="grid">
-		{{#each resources}}
-			{{> card}}
-		{{/each}}
-	</div>
+  <div class="resourcesall">
+  	<div style="margin-bottom: 20px;">
+  		<a class="categoryFilter" href="*"><span class="label label-default">All</span></a>
+  		{{#each categories}}
+  			<a class="categoryFilter" href="{{text}}"><span class="label label-default">{{text}}</span></a>
+  		{{/each}}
+  	</div>
+  	<div class="grid">
+  		{{#each resources}}
+  			{{> card}}
+  		{{/each}}
+  	</div>
+</div>
 </template>
 
 <template name="card">

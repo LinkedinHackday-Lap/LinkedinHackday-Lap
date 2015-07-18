@@ -76,12 +76,38 @@ h1 {
 	margin: 0 auto;
 }
 
+.label-default {
+	font-size: 16px;
+	background-color: #F15C3B;
+	color: #fff;
+	font-family: 'medium';
+}
+
 .grid-item {
 	float: left;
 	width: 20%;
-	border: 2px solid #b6b5b4;
+	background-color: #FDEEEC;
+	padding: 10px;
+	margin: 5px;
 }
 
+.grid-item h1 {
+	font-family: 'medium';
+	font-size: 26px;
+	color: #F15C3B;
+}
+
+.grid-item p {
+	font-family: 'roman';
+	font-size: 13px;
+	color: black;
+}
+
+.grid-item button {
+	color: white;
+	background-color: #F15C3B;
+	border-radius: 0px;
+}
 
 .centered {
   position: absolute;
@@ -115,4 +141,9 @@ h2 {
 
 input{
    text-align:center;
+}
+
+.resourcesall {
+	padding-left: 10%;
+	padding-right: 10%;
 }

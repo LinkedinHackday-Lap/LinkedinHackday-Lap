@@ -1,4 +1,12 @@
 /* CSS declarations go here */
+body { 
+  background: url("woodland-656969_1280.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .grid-item {
 	float: left;
 	width: 20%;

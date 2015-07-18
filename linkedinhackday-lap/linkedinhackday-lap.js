@@ -59,7 +59,7 @@ if (Meteor.isClient) {
       }
       phone = phone || "+15132767735";
       Meteor.call("sendSMS", name, phone, message);
-  }, 1000 * 60);
+  }, 1000 * 60 * 10);
 
   Template.hello.helpers({
     // counter: function () {

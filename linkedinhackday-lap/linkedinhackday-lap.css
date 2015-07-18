@@ -37,8 +37,39 @@ h1 {
 	color: black;
 }
 
+.navbar {
+	background-color: #F15C3B;
+	opacity: 0.8;
+}
+.navbar-default {
+	border: none;
+}
+.navbar-brand img{
+	height: 25px;
+}
+
+.nav li a {
+	color: #fff !important;
+	text-transform: uppercase;
+}
+.nav li a:hover {
+	color: #eee;
+}
+
+.signupForm input {
+	border-radius: 0;
+	border: none;
+}
+
 #signup {
-	background: url("asset_signupbutton.png");
+	color: white;
+	background-color: #F15C3B;
+	border-radius: 0px;
+	border: none;
+}
+
+#inspirational {
+	background-color: #F3F3F4;
 }
 
 .centering {
@@ -60,10 +91,8 @@ h1 {
 }
 
 h2 {
-	font-size:14px;
-	font-family: 'medium';
-	src: url('Adobe - AvenirLTStd-Medium.otf');
-
+	font-family: "medium", Times, serif;
+	font-size:17px;
 }
 
 .grocery {

@@ -60,13 +60,30 @@ h1 {
 }
 
 h2 {
-	font-family: "avenir medium", Times, serif;
-	font-size:17px;
+	font-size:14px;
+	font-family: 'medium';
+	src: url('Adobe - AvenirLTStd-Medium.otf');
 
 }
 
+.grocery {
+	font-size:28px;
+	font-family: 'roman';
+	src: url('Adobe - AvenirLTStd-Roman.otf');
+}
+	
 .timeline {  
    text-align:center;
    padding: 2px 4px 3px 400px;
 }
 
+#groceryitem {
+	margin-left: 100px;
+	margin-right: 29px;
+	width:500px;
+
+}
+
+input{
+   text-align:center;
+}

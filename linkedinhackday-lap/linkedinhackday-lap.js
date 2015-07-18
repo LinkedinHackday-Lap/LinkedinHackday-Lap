@@ -14,6 +14,12 @@ if (Meteor.isClient) {
     template: 'timeline'
   });
 
+    Router.route('/list', {
+    template: 'list'
+  });
+
+
+
   var phone;
   var name;
   var year;

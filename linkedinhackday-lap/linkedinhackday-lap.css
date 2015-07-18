@@ -82,7 +82,22 @@ h1 {
 	border: 2px solid #b6b5b4;
 }
 
+
+.centered {
+  position: absolute;
+  left: 34%;
+  margin-left: -100px;
+  top: 20%;
+}
+
+h2 {
+	font-family: "avenir medium", Times, serif;
+	font-size:17px;
+
+}
+
 .timeline {  
    text-align:center;
    padding: 2px 4px 3px 400px;
 }
+

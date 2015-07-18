@@ -66,6 +66,19 @@ h2 {
 
 }
 
+h3 {
+	font-size:28px;
+	font-family: 'medium';
+	color: white;
+	src: url('Adobe - AvenirLTStd-Medium.otf');
+
+}
+
+history {
+	color:#f15c3b;
+	
+}
+
 .grocery {
 	font-size:28px;
 	font-family: 'roman';

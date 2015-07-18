@@ -1,5 +1,12 @@
 if (Meteor.isClient) {
-  
+  Router.map(function() {
+    this.route('hello', {
+      path: '/'
+    });
+    this.route('about', {
+      path: '/about'
+    })
+  });
   var phone;
   var name;
 

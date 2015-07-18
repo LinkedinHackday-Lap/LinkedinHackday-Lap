@@ -6,9 +6,26 @@
   <h1>Welcome to Meteor!</h1>
 
   {{> hello}}
+
+
 </body>
 
 <template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+
+
+ 	<form>
+        <input type="text" name="name" placeholder="Zhifan Li" />
+        <input type="text" name="phone" placeholder="xxx-xxx-xxxx"/>
+        <input type="submit" value="add">
+    </form>
+
+
+
+  <!-- <button>Submit</button> -->
+  <p>You've pressed the button {{counter}} times. {{test}}</p>
+
+
+
+
+  <!-- <p>{{test}}</p> -->
 </template>

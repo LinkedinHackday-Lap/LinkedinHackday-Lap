@@ -7,6 +7,44 @@ body {
   background-size: cover;
 }
 
+@font-face {
+	font-family: 'medium';
+	src: url('Adobe - AvenirLTStd-Medium.otf');
+}
+
+@font-face {
+	font-family: 'roman';
+	src: url('Adobe - AvenirLTStd-Roman.otf');
+}
+
+@font-face {
+	font-family: 'bold';
+	src: url('Adobe - AvenirLTStd-Bold.otf');
+}
+
+* {
+	font-family: 'roman';
+}
+
+p {
+	font-family: 'roman';
+	font-size: 17px;
+	color: black;
+}
+
+h1 {
+	font-family: 'medium';
+	color: black;
+}
+
+#signup {
+	background: url("asset_signupbutton.png");
+}
+
+.centering {
+	margin: 0 auto;
+}
+
 .grid-item {
 	float: left;
 	width: 20%;

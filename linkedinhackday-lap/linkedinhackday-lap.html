@@ -40,11 +40,21 @@
     </div>
   </div>
  	<div class="col-sm-offset-4 col-md-4">
-    <form class="form-inline signupForm" name="signup">
-          <input class="form-control" type="text" name="name" placeholder="Zhifan Li" />
-          <input class="form-control" type="text" name="phone" placeholder="xxx-xxx-xxxx"/>
+
+ 		
+   <br><br><br><br><br><br>
+
+     <div class="centered2 col-sm-offset-2 col-md-8" align="center" style="background:white;height:200px;width:900px;">
+	 	<br><h1 class="grocery" align="center">Welcome to L.A.P.!</h1>
+	 	<h2 align="center">Welcome! Don’t know which item to buy and need some suggestions and tips? L.A.P. (Life After Prison) provides you recommendations based on the items you need. By providing your name and phone number, we will send you recommendations when you complete your list in the next page.</h2>
+	  </div>
+
+	  <form class="form-inline signupForm" id="homepage" name="signup">
+          <input class="form-control" type="text" name="name" placeholder="Your Name" />
+          <input class="form-control" type="text" name="phone" placeholder="Phone (xxx-xxx-xxxx)"/>
           <input type="submit" id="signup" class="btn btn-default" value="SIGN UP">
         </form>
+
   </div>
 </template>
 
@@ -64,7 +74,8 @@
 	<form class="enter-year" align = "center"> 
 		<h3 >From how far back do you want to know?</h3>
         <input type="text" name="year" placeholder="2005" />
-        <input class = "history" type="submit" value="submit">
+        <!-- <input class = "history" type="submit" value="submit"> -->
+        <input type="submit" id="signup" class="btn btn-default" value="SUBMIT">
     </form>
     <br>
 	<div class = "timeline" id="my-timeline" align="center"></div>
